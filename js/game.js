@@ -20,7 +20,7 @@ gameScene.preload = function () {
 gameScene.create = function () {  
     
 //Creating background
-    this.gameSpeed = 5;
+    this.gameSpeed = 7;
     
     let bg = this.add.sprite(0, 0, 'background');
     bg.setOrigin(0.0);
