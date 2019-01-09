@@ -9,7 +9,7 @@ gameScene.preload = function () {
     this.load.image('cactus', 'assets/cactus.png');
     this.load.image('llama', 'assets/llamastill.png');
 // loading Audio
-    this.load.audio('loop', 'assets/music/loop.wav');
+    this.load.audio('loop', 'assets/music/ghame.mp3');
 // loading buttons
     this.load.spritesheet('volume', 'assets/volume.png', {
         frameWidth: 120,
