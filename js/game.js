@@ -175,7 +175,7 @@ gameScene.gameOver = function() {
     this.time.delayedCall(1000, function() {    
     let endScreen = this.add.sprite(0,0,'endscreen');
     this.endScreen.setVisible(true);
-    }
+    }, [], this);
     this.time.delayedCall(3000, function() {
         this.endScreen.setVisible(false);
         this.scene.restart(),
