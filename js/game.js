@@ -5,6 +5,7 @@ let gameScene = new Phaser.Scene('Game');
 gameScene.preload = function () {
 // loading Images
     this.load.image('background', 'assets/bg.png');
+    this.load.image('endscreen', 'assets/endscreen.png');
     this.load.image('sandfloor', 'assets/sandfloor.png');
     this.load.image('cactus', 'assets/cactus.png');
     this.load.image('llama', 'assets/llamastill.png');
@@ -15,6 +16,7 @@ gameScene.preload = function () {
         frameWidth: 120,
         frameHeight: 120
     })
+    
 };
 
 gameScene.create = function () {  
@@ -170,7 +172,8 @@ gameScene.gameOver = function() {
     this.music.setDetune(-800);
     this.cameras.main.shake(1000);
     console.log("your score was: " + this.score);
-    this.time.delayedCall(1000, function() {
+    this.endScreen = this.add.sprite(0,0,'endscreen');
+    this.time.delayedCall(3000, function() {
         this.scene.restart(),
         this.music.stop();
     }, [], this);
