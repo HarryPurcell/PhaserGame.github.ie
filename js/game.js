@@ -172,8 +172,12 @@ gameScene.gameOver = function() {
     this.music.setDetune(-800);
     this.cameras.main.shake(1000);
     console.log("your score was: " + this.score);
-    this.endScreen = this.add.sprite(0,0,'endscreen');
+    this.time.delayedCall(1000, function() {    
+    let endScreen = this.add.sprite(0,0,'endscreen');
+    this.endScreen.setVisible(true);
+    }
     this.time.delayedCall(3000, function() {
+        this.endScreen.setVisible(false);
         this.scene.restart(),
         this.music.stop();
     }, [], this);
