@@ -178,10 +178,10 @@ gameScene.gameOver = function() {
     this.cameras.main.shake(1000);
     console.log("your score was: " + this.score);
     this.time.delayedCall(1000, function() {    
-    this.endScreen.setVisible(true);
+    endScreen.setVisible(true);
     }, [], this);
     this.time.delayedCall(5000, function() {
-        this.endScreen.setVisible(false);
+        endScreen.setVisible(false);
         this.scene.restart(),
         this.music.stop();
     }, [], this);
