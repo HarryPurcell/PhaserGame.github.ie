@@ -28,7 +28,7 @@ gameScene.create = function () {
     bg.setOrigin(0.0);
     
     var endScreen = this.add.sprite(0,0,'endscreen');
-    this.endScreen.setVisible(false);
+    this.endScreen.setVisible('false');
     this.endScreen.setDepth(4);
     
 //Volume Button
@@ -178,10 +178,10 @@ gameScene.gameOver = function() {
     this.cameras.main.shake(1000);
     console.log("your score was: " + this.score);
     this.time.delayedCall(1000, function() {    
-    this.endScreen.setVisible(true);
+    this.endScreen.setVisible('true');
     }, [], this);
     this.time.delayedCall(5000, function() {
-        this.endScreen.setVisible(false);
+        this.endScreen.setVisible('false');
         this.scene.restart(),
         this.music.stop();
     }, [], this);
