@@ -27,6 +27,10 @@ gameScene.create = function () {
     let bg = this.add.sprite(0, 0, 'background');
     bg.setOrigin(0.0);
     
+    let endScreen = this.add.sprite(0,0,'endscreen');
+    this.endScreen.setVisible(false);
+    this.endScreen.setDepth(4);
+    
 //Volume Button
     
     this.volumeBtn = this.add.sprite(600,40,'volume').setScale(.5).setInteractive();
@@ -158,6 +162,7 @@ gameScene.update = function () {
         }
 
 // Gameover on collision
+        
         if (Phaser.Geom.Intersects.RectangleToRectangle(this.llama.getBounds(), cactus[i].getBounds())) {
             this.gameOver();
             break;
@@ -173,10 +178,9 @@ gameScene.gameOver = function() {
     this.cameras.main.shake(1000);
     console.log("your score was: " + this.score);
     this.time.delayedCall(1000, function() {    
-    let endScreen = this.add.sprite(0,0,'endscreen');
     this.endScreen.setVisible(true);
     }, [], this);
-    this.time.delayedCall(3000, function() {
+    this.time.delayedCall(5000, function() {
         this.endScreen.setVisible(false);
         this.scene.restart(),
         this.music.stop();
