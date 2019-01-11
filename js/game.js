@@ -20,8 +20,8 @@ gameScene.preload = function () {
 };
 
 gameScene.create = function () {  
-    let endX = -1000;
-    let endY = -1000;
+    var endX = -2000;
+    var endY = -2000;
     
     
 //Creating background
@@ -181,15 +181,13 @@ gameScene.gameOver = function() {
     this.music.setDetune(-800);
     this.cameras.main.shake(1000);
     console.log("your score was: " + this.score);
-    this.time.delayedCall(1000, function() {    
         this.endX = 0;
         this.endY = 0;
-        
-
-    }, [], this);
     this.time.delayedCall(5000, function() {
         this.scene.restart(),
         this.music.stop();
+        this.endX = -2000;
+        this.endY = -2000;
     }, [], this);
 }
 
