@@ -175,10 +175,11 @@ gameScene.gameOver = function() {
     this.music.setDetune(-800);
     this.cameras.main.shake(1000);
     console.log("your score was: " + this.score);
-//    this.time.delayedCall(1000, function() {    
-//
-//
-//    }, [], this);
+    this.time.delayedCall(1000, function() {    
+        let endscreen = this.add.sprite(0,0,'endscreen');
+        this.endscreen.visible = true;
+
+    }, [], this);
     this.time.delayedCall(5000, function() {
         this.scene.restart(),
         this.music.stop();
