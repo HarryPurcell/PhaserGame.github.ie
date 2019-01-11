@@ -177,7 +177,7 @@ gameScene.gameOver = function() {
     console.log("your score was: " + this.score);
     this.time.delayedCall(1000, function() {    
         let endscreen = this.game.add.sprite(0,0,'endscreen').setOrigin(0,0);
-        this.endscreen.visible = true;
+        
 
     }, [], this);
     this.time.delayedCall(5000, function() {
