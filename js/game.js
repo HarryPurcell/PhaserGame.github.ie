@@ -24,7 +24,7 @@ gameScene.create = function () {
 //Creating background
     this.gameSpeed = 7;
     
-    let bg = this.add.sprite(0, 0, 'background');
+    let bg = this.add.sprite(0, 0, 'background').setDepth(1);
     bg.setOrigin(0.0);
     let endscreen = this.add.sprite(0,0,'endscreen').setOrigin(0,0);
     this.endscreen.setDepth(0);
