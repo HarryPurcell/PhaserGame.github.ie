@@ -27,7 +27,7 @@ gameScene.create = function () {
     let bg = this.add.sprite(0, 0, 'background');
     bg.setOrigin(0.0);
     
-    var endScreen = this.game.add.image(0,0,'endscreen');
+    let endScreen = this.add.image(0,0,'endscreen');
     this.endScreen.visible('false');
     this.endScreen.setDepth(4);
     
