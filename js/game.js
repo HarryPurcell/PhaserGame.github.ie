@@ -28,7 +28,7 @@ gameScene.create = function () {
     bg.setOrigin(0.0);
     
     var endScreen = this.add.sprite(0,0,'endscreen');
-    this.endScreen.setVisible('false');
+    this.endScreen.visible('false');
     this.endScreen.setDepth(4);
     
 //Volume Button
@@ -85,7 +85,7 @@ gameScene.create = function () {
         setXY: {
             x: 800,
             y: 235,
-            stepX: 200,
+            stepX: v
             stepY: -60
         }
     });
