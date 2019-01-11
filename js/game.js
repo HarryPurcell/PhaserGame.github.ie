@@ -183,7 +183,7 @@ gameScene.gameOver = function() {
     console.log("your score was: " + this.score);
         this.endX = 0;
         this.endY = 0;
-    this.time.delayedCall(5000, function() {
+    this.time.delayedCall(2000, function() {
         this.scene.restart(),
         this.music.stop();
         this.endX = -2000;
