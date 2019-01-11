@@ -5,7 +5,7 @@ let gameScene = new Phaser.Scene('Game');
 gameScene.preload = function () {
 // loading Images
     this.load.image('background', 'assets/bg.png');
-    this.load.image('endscreen', 'assets/endscreen.png');
+    this.load.image('endscreen', 'assets/Endscreen.png');
     this.load.image('sandfloor', 'assets/sandfloor.png');
     this.load.image('cactus', 'assets/cactus.png');
     this.load.image('llama', 'assets/llamastill.png');
