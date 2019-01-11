@@ -20,8 +20,8 @@ gameScene.preload = function () {
 };
 
 gameScene.create = function () {  
-    let endX = 0;
-    let endY = 0;
+    let endX = -1000;
+    let endY = -1000;
     
     
 //Creating background
@@ -30,6 +30,7 @@ gameScene.create = function () {
     let bg = this.add.sprite(0, 0, 'background')
     bg.setOrigin(0.0);
     let endscreen = this.add.sprite(0,0,'endscreen').setOrigin(this.endX,this.endY);
+    this.endscreen.depth = 2;
     
     
     
