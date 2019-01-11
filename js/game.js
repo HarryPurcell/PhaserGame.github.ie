@@ -20,8 +20,8 @@ gameScene.preload = function () {
 };
 
 gameScene.create = function () {  
-    let endX = -1000;
-    let endY = -1000;
+    let endX = 0;
+    let endY = 0;
     
     
 //Creating background
