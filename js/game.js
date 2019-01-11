@@ -20,14 +20,17 @@ gameScene.preload = function () {
 };
 
 gameScene.create = function () {  
+    let endX = -1000;
+    let endY = -1000;
+    
     
 //Creating background
     this.gameSpeed = 7;
     
-    let endscreen = this.add.sprite(0,0,'endscreen').setOrigin(0,0);
-    this.endscreen.setDepth(0);
-    let bg = this.add.sprite(0, 0, 'background').setDepth(1);
+    let bg = this.add.sprite(0, 0, 'background')
     bg.setOrigin(0.0);
+    let endscreen = this.add.sprite(0,0,'endscreen').setOrigin(endX,endY);
+    
     
     
     
@@ -178,7 +181,8 @@ gameScene.gameOver = function() {
     this.cameras.main.shake(1000);
     console.log("your score was: " + this.score);
     this.time.delayedCall(1000, function() {    
-        
+        this.endX = 0;
+        this.endY = 0;
         
 
     }, [], this);
